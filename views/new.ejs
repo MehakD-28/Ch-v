@@ -1,0 +1,38 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row">
+    <div class="col-8 offset-2 ">
+        <br>
+        <br>
+    <h3>Create a New Listing</h3>
+    <form method="post" action="/listings"  novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label" >Title:</label>
+        <input name="listing[title]" placeholder="enter title"  required class="form-control">
+        <div class="invalid-feedback"> Invalid value</div>
+        </div>
+
+        <div class="mb-3"><label for="title" class="form-label">Description:</label>
+            <textarea name="listing[description]" required placeholder="enter description" class="form-control"></textarea>
+            <div class="invalid-feedback"> Invalid value</div></div>
+    
+        <div class="mb-3">
+            <label for="title" class="form-label">Upload Image:</label>
+        <input name="listing[image]" type="file"  required placeholder="enter img link" class="form-control">
+        </div >
+        <div class="row">
+        <div class="mb-3 col-md-4"><label for="title" class="form-label">Price:</label>
+            <input name="listing[price]"  required placeholder="enter price" class="form-control">
+            <div class="invalid-feedback"> Invalid value</div></div>
+        <div class="mb-3 col-md-8"><label for="title" class="form-label">Country:</label>
+            <input name="listing[country]" required placeholder="enter country" class="form-control">
+            <div class="invalid-feedback"> Invalid value</div></div></div>
+        <div class="mb-3"> <label for="title" class="form-label">Location:</label>
+            <input name="listing[location]" required placeholder="enter location" class="form-control">
+            <div class="invalid-feedback"> Invalid value</div></div>
+            <br>
+        <button class="btn add-btn">Add</button>
+        <br>
+        <br>
+    </form>
+</div>
+</div>
